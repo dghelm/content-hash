@@ -7,7 +7,7 @@
 >This is a simple package made for encoding and decoding content hashes as specified in the [EIP 1577](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1577.md).
 This package will be useful for every [Ethereum](https://www.ethereum.org/) developer wanting to interact with [EIP 1577](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1577.md) compliant [ENS resolvers](http://docs.ens.domains/en/latest/introduction.html).
 
-Here you can find a [live demo](https://content-hash.surge.sh/) of this package.
+Here you can find a [live demo](https://5g0ab4bfifpa1rcvdainjdc9h6ldmmg4rlgke3rc1g1372mspdeevfg.siasky.net/) of this package.
 * link to [npm](https://www.npmjs.com/package/content-hash)
 * link to [Github](https://github.com/pldespaigne/content-hash)
 
@@ -15,6 +15,7 @@ Here you can find a [live demo](https://content-hash.surge.sh/) of this package.
 - `swarm-ns`
 - `ipfs-ns`
 - `ipns-ns`
+- `skynet-ns`
 - Every other codec supported by [multicodec](https://github.com/multiformats/multicodec) will be encoded by default in `utf-8`.
 > You can see the full list of codec supported [here](https://github.com/multiformats/multicodec/blob/master/table.csv)
 
