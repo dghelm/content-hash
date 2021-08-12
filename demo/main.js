@@ -9,6 +9,13 @@ window.onload = () => {
 		ipfsResultElem.innerHTML = contentHash.fromIpfs(ipfsInputElem.value)
 	})
 
+	const skynetInputElem = document.getElementById('skynet-input')
+	const skynetButtonElem = document.getElementById('skynet-encode')
+	const skynetResultElem = document.getElementById('skynet-result')
+	skynetButtonElem.addEventListener('click', () => {
+		skynetResultElem.innerHTML = contentHash.encode("skynet-ns", skynetInputElem.value)
+	})
+
 	const swarmInputElem = document.getElementById('swarm-input')
 	const swarmButtonElem = document.getElementById('swarm-encode')
 	const swarmResultElem = document.getElementById('swarm-result')
@@ -27,10 +34,12 @@ window.onload = () => {
 		
 		if(contentHash.getCodec(contentInputElem.value) === 'ipfs-ns')codec = 'ipfs'
 		else if(contentHash.getCodec(contentInputElem.value) === 'swarm-ns')codec = 'swarm'
+		else if(contentHash.getCodec(contentInputElem.value) === 'skynet-ns')codec = 'skynet'
 
 		let url = 'https://'
 		if(codec === 'ipfs') url += 'gateway.ipfs.io/ipfs/' + cth + '/'
 		else if(codec === 'swarm') url += 'swarm-gateways.net/bzz:/' + cth + '/'
+		else if(codec === 'skynet') url += 'siasky.net/' + cth + '/'
 		else url = '#'
 
 		codecResultElem.innerHTML = 'codec : ' + codec
